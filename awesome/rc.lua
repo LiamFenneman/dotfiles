@@ -535,3 +535,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 --awful.spawn.with_shell("")
 awful.spawn.with_shell("feh --bg-fill -r -z ~/Pictures/wallpapers")
 --awful.spawn.with_shell("picom --experimental-backends -b")
+awful.spawn.with_shell("/home/liam/.config/polybar/launch.sh")
+

@@ -9,3 +9,5 @@
 !rofi/**/*
 !picom/
 !picom/**/*
+!polybar/
+!polybar/**/*
