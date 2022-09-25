@@ -16,3 +16,5 @@
 !gtk-4.0/**/*
 !.themes/
 !.themes/**/*
+!Thunar/
+!Thunar/uca.xml
