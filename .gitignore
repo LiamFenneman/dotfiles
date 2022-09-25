@@ -11,3 +11,7 @@
 !picom/**/*
 !polybar/
 !polybar/**/*
+!gtk-4.0/
+!gtk-4.0/**/*
+!.themes/
+!.themes/**/*
