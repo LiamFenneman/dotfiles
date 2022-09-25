@@ -1,6 +1,7 @@
 *
 *.swp
 !.gitignore
+!README.md
 !awesome/
 !awesome/**/*
 !kitty/
