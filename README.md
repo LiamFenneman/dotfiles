@@ -1,8 +1,16 @@
 # My Awesome Linux config
+_**NOTE**: this has only been tested on Fedora 36+_
 
-## Requirements
+## Apps/Programs
 
-*TODO*
+- Awesome WM
+- Kitty
+- Thunar
+- Chromium
+- picom
+- Polybar
+- Rofi
+- feh
 
 ## Install
 
