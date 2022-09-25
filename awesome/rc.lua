@@ -315,9 +315,9 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    -- dmenu
-    awful.key({ modkey }, "r", function() awful.util.spawn("dmenu_run") end,
-              {description = "run dmenu", group = "launcher"}),
+    -- rofi
+    awful.key({ modkey }, "a", function() awful.util.spawn("rofi -show drun") end,
+              {description = "run rofi", group = "launcher"}),
 
     -- open web browser
     awful.key({ modkey }, "b", function() awful.util.spawn("chromium-browser") end,

@@ -5,3 +5,5 @@
 !awesome/**/*
 !kitty/
 !kitty/**/*
+!rofi/
+!rofi/**/*
