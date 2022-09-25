@@ -1,5 +1,7 @@
-/**/
+*
 *.swp
 !.gitignore
-!/awesome/
-!/kitty/
+!awesome/
+!awesome/**/*
+!kitty/
+!kitty/**/*
