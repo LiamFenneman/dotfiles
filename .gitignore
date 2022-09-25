@@ -7,3 +7,5 @@
 !kitty/**/*
 !rofi/
 !rofi/**/*
+!picom/
+!picom/**/*
