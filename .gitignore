@@ -4,6 +4,9 @@
 !README.md
 !awesome/
 !awesome/**/*
+!nvim/
+!nvim/**/*
+nvim/plugin/*
 !kitty/
 !kitty/**/*
 !rofi/
