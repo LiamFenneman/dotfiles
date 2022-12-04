@@ -13,6 +13,7 @@ return require("packer").startup(function(use)
         run = ":TSUpdate"
     })
     use("folke/tokyonight.nvim")
+    use("ellisonleao/gruvbox.nvim")
 
     -- :VimBeGood
     use("theprimeagen/vim-be-good")
