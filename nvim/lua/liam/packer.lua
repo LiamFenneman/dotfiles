@@ -15,6 +15,7 @@ return require("packer").startup(function(use)
     })
     use("folke/tokyonight.nvim")
     use("ellisonleao/gruvbox.nvim")
+    use("rose-pine/neovim")
 
     -- :VimBeGood
     use("theprimeagen/vim-be-good")

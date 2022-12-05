@@ -1,7 +1,6 @@
 vim.o.background = "dark"
 
 -- setup must be called before loading the colorscheme
--- Default options:
 require("gruvbox").setup({
     undercurl = true,
     underline = true,
@@ -20,6 +19,47 @@ require("gruvbox").setup({
     transparent_mode = true,
 })
 
+require('rose-pine').setup({
+    --- @usage 'main' | 'moon'
+    dark_variant = 'main',
+    bold_vert_split = false,
+    dim_nc_background = false,
+    disable_background = true,
+    disable_float_background = false,
+    disable_italics = false,
+
+    --- @usage string hex value or named color from rosepinetheme.com/palette
+    groups = {
+        background = 'base',
+        panel = 'surface',
+        border = 'highlight_med',
+        comment = 'muted',
+        link = 'iris',
+        punctuation = 'subtle',
+
+        error = 'love',
+        hint = 'iris',
+        info = 'foam',
+        warn = 'gold',
+
+        headings = {
+            h1 = 'iris',
+            h2 = 'foam',
+            h3 = 'rose',
+            h4 = 'gold',
+            h5 = 'pine',
+            h6 = 'foam',
+        }
+        -- or set all headings at once
+        -- headings = 'subtle'
+    },
+
+    -- Change specific vim highlight groups
+    highlight_groups = {
+        ColorColumn = { bg = 'rose' }
+    }
+})
+
 require("tokyonight").setup({
     style = "dark", 
     transparent = true,
@@ -32,18 +72,7 @@ require("tokyonight").setup({
         sidebars = "dark", -- style for sidebars, see below
         floats = "dark", -- style for floating windows
     },
-    --- You can override specific color groups to use other groups or a hex color
-    --- function will be called with a ColorScheme table
-    ---@param colors ColorScheme
-    on_colors = function(colors) end,
-
-    --- You can override specific highlights to use other groups or a hex color
-    --- function will be called with a Highlights and ColorScheme table
-    ---@param highlights Highlights
-    ---@param colors ColorScheme
-    on_highlights = function(highlights, colors) end,
 })
 
 -- set the colorscheme
--- vim.cmd("colorscheme tokyonight")
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme rose-pine")
