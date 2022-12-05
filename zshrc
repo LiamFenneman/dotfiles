@@ -8,11 +8,16 @@ ZSH_THEME="half-life"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+# Shortcuts to commom folders
+alias p="cd ~/Documents/Projects/"
+alias u="cd ~/Documents/University/"
+
 # User configuration
 alias vim="nvim"
 alias ls="/usr/bin/ls -Ahls --color=auto"
-alias p="cd ~/Documents/Projects/"
-alias u="cd ~/Documents/University/"
+alias mv="mv -i"
+alias mkdir="mkdir -p"
+alias df="df -h"
 
 # Git alias
 alias gs="git status"
