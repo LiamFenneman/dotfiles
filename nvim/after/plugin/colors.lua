@@ -61,7 +61,7 @@ require('rose-pine').setup({
 })
 
 require("tokyonight").setup({
-    style = "dark", 
+    style = "dark",
     transparent = true,
     terminal_colors = true,
     styles = {
