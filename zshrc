@@ -26,7 +26,7 @@ alias ga="git add "
 alias gc="git commit "
 alias gd="git diff"
 alias gdc="git diff --cached"
-alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 
 export PATH=$HOME/.local/bin:$PATH
 export EDITOR=/usr/bin/nvim
