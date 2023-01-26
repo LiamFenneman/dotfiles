@@ -8,7 +8,6 @@ nnoremap("<leader>qq", "<cmd>Ex<CR>");
 nnoremap("<C-d>", "<C-d>zz");
 nnoremap("<C-u>", "<C-u>zz");
 
--- Rust
-nnoremap("<leader>rr", "<cmd>! cargo run<CR>");
-nnoremap("<leader>rc", "<cmd>! cargo check<CR>");
-nnoremap("<leader>rt", "<cmd>! cargo test<CR>");
+-- Copy-Paste to Register
+vim.keymap.set("n", "<leader>y", "\"+y");
+vim.keymap.set("v", "<leader>y", "\"+y");
