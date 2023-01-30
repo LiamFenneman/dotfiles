@@ -43,6 +43,24 @@ require('packer').startup(function(use)
     use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
+    -- Git related
+    use 'tpope/vim-fugitive'
+    use 'tpope/vim-rhubarb'
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup {
+                signs = {
+                    add = { text = '+' },
+                    change = { text = '~' },
+                    delete = { text = '_' },
+                    topdelete = { text = '‾' },
+                    changedelete = { text = '~' },
+                },
+            }
+        end
+    }
+
     -- Lualine
     use {
         'nvim-lualine/lualine.nvim',
