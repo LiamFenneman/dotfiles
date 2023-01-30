@@ -397,7 +397,11 @@ mason_lspconfig.setup_handlers {
 }
 
 -- Turn on lsp status information
-require('fidget').setup()
+require('fidget').setup({
+    window = {
+        blend = 0,
+    },
+})
 
 -- [[ Autocompletion Setup ]]
 local cmp = require('cmp')
