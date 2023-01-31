@@ -158,9 +158,8 @@ vim.keymap.set({ 'n', 'v' }, '<leader>qq', vim.cmd.Ex)
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
--- Copy highlight to Register
-vim.keymap.set('n', '<leader>y', '"+y')
-vim.keymap.set('v', '<leader>y', '"+y')
+-- Copy/Paste
+vim.o.clipboard = 'unnamedplus'
 
 -- Disable highlight on search
 vim.o.hlsearch = false
