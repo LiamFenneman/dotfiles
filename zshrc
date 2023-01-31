@@ -5,8 +5,16 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="half-life"
 
 # Plugins
-plugins=(git)
+plugins=(
+    git
+    fzf-zsh-plugin
+    fast-syntax-highlighting
+    zsh-autosuggestions
+)
 source $ZSH/oh-my-zsh.sh
+
+# set CTRL+Space to accept auto suggestion
+bindkey '^ ' autosuggest-accept
 
 # Shortcuts to commom folders
 alias p="cd ~/Documents/Projects/"
