@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 # Shortcuts to commom folders
 alias p="cd ~/Documents/Projects/"
 alias u="cd ~/Documents/University/"
+alias d="cd ~/dotfiles/"
 
 # User configuration
 alias vim="nvim"
