@@ -27,6 +27,9 @@ require('packer').startup(function(use)
         requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
     }
 
+    -- Add icons to nvim-cmp
+    use 'onsails/lspkind.nvim'
+
     -- Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -70,6 +73,16 @@ require('packer').startup(function(use)
                 char = '┊',
                 show_trailing_blankline_indent = false,
             }
+        end
+    }
+
+    -- GitHub Copilot
+    use 'zbirenbaum/copilot.lua'
+    use {
+        "zbirenbaum/copilot-cmp",
+        after = { "copilot.lua" },
+        config = function()
+            require("copilot_cmp").setup()
         end
     }
 
@@ -235,6 +248,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
     group = highlight_group,
     pattern = '*',
+})
+
+-- [[ GitHub Copilot ]]
+require('copilot').setup({
+    suggestion = { enabled = false },
+    panel = { enabled = false },
 })
 
 -- [[ Harpoon Setup ]]
@@ -450,8 +469,18 @@ require('fidget').setup({
 -- [[ Autocompletion Setup ]]
 local cmp = require('cmp')
 local luasnip = require('luasnip')
+local lspkind = require('lspkind')
+
+vim.api.nvim_set_hl(0, 'CmpItemKindCopilot', { fg = '#6CC644' })
 
 cmp.setup({
+    formatting = {
+        format = lspkind.cmp_format({
+            mode = 'symbol_text',
+            maxwidth = 50,
+            symbol_map = { Copilot = '' },
+        }),
+    },
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -485,6 +514,7 @@ cmp.setup({
         end, { 'i', 's' }),
     },
     sources = {
+        { name = "copilot" },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
     },
