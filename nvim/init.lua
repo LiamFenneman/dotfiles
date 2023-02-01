@@ -52,16 +52,6 @@ require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-        config = function()
-            require('lualine').setup({
-                options = {
-                    icons_enabled = true,
-                    theme = 'rose-pine',
-                    component_separators = '|',
-                    section_separators = '',
-                },
-            })
-        end
     }
 
     -- Comment
@@ -186,6 +176,16 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- Colorscheme
 vim.o.termguicolors = true
+
+-- [[ Lualine ]]
+require('lualine').setup({
+    options = {
+        icons_enabled = true,
+        theme = 'rose-pine',
+        component_separators = '|',
+        section_separators = '',
+    },
+})
 
 -- [[ Git keymaps ]]
 vim.keymap.set('n', '<leader>gp', ':Git push -u origin HEAD<CR>', { desc = '[G]it [P]ush to HEAD' })
