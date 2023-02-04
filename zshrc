@@ -4,6 +4,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="half-life"
 ZSH_THEME="mortalscumbag"
+ZSH_TMUX_AUTOCONNECT=true
+ZSH_TMUX_AUTOSTART=true
 
 # Plugins
 plugins=(
@@ -11,6 +13,7 @@ plugins=(
     fzf-zsh-plugin
     fast-syntax-highlighting
     zsh-autosuggestions
+    tmux
 )
 source $ZSH/oh-my-zsh.sh
 
