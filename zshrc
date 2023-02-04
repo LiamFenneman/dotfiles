@@ -2,7 +2,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="half-life"
+# ZSH_THEME="half-life"
+ZSH_THEME="mortalscumbag"
 
 # Plugins
 plugins=(
