@@ -190,6 +190,11 @@ vim.o.completeopt = 'menuone,noselect'
 -- Colorscheme
 vim.o.termguicolors = true
 
+-- Folding
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.o.foldenable = false
+
 -- [[ Lualine ]]
 require('lualine').setup({
     options = {
