@@ -25,6 +25,7 @@ require('packer').startup(function(use)
 
     -- Rust-specific
     use 'simrat39/rust-tools.nvim'
+    use 'saecki/crates.nvim'
 
     -- Autocompletion
     use {

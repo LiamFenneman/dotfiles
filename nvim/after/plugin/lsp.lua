@@ -156,5 +156,6 @@ cmp.setup({
         { name = 'buffer' },
         { name = 'luasnip' },
         { name = 'calc' },
+        { name = "crates" },
     },
 })
