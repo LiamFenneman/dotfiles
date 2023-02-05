@@ -43,6 +43,7 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- Colorscheme
 vim.o.termguicolors = true
+vim.o.background = 'dark'
 
 -- Folding
 vim.o.foldmethod = 'expr'
