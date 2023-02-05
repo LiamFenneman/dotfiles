@@ -36,10 +36,8 @@ require('packer').startup(function(use)
             pcall(require('nvim-treesitter.install').update { with_sync = true })
         end,
     }
-    use {
-        'nvim-treesitter/nvim-treesitter-textobjects',
-        after = 'nvim-treesitter',
-    }
+    use('nvim-treesitter/nvim-treesitter-textobjects')
+    use('nvim-treesitter/nvim-treesitter-context')
 
     -- Telescope
     use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
