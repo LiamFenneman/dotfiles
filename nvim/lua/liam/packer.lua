@@ -17,8 +17,14 @@ require('packer').startup(function(use)
 
             -- Useful status updates for LSP
             'j-hui/fidget.nvim',
+
+            -- Neovim LSP
+            'folke/neodev.nvim',
         }
     }
+
+    -- Rust-specific
+    use 'simrat39/rust-tools.nvim'
 
     -- Autocompletion
     use {
@@ -82,6 +88,12 @@ require('packer').startup(function(use)
             require("copilot_cmp").setup()
         end
     }
+
+    -- Debugging
+    use 'mfussenegger/nvim-dap'
+    use 'theHamsta/nvim-dap-virtual-text'
+    use 'rcarriga/nvim-dap-ui'
+    use 'nvim-telescope/telescope-dap.nvim'
 
     -- Rose Pine Colorscheme
     use {

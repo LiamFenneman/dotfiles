@@ -1,3 +1,8 @@
+-- [[ Neodev ]]
+require("neodev").setup({
+    library = { plugins = { "nvim-dap-ui" }, types = true },
+})
+
 -- [[ LSP Config ]]
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
@@ -50,13 +55,13 @@ end
 
 -- Enable the following language servers
 local servers = {
-    rust_analyzer = {
-        Rust = {
-            cmd = {
-                'rustup', 'run', 'nightly', 'rust-analyzer'
-            }
-        }
-    },
+    -- rust_analyzer = {
+    --     Rust = {
+    --         cmd = {
+    --             'rustup', 'run', 'nightly', 'rust-analyzer'
+    --         }
+    --     }
+    -- },
     tsserver = {},
     sumneko_lua = {
         Lua = {
