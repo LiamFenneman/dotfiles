@@ -149,8 +149,12 @@ cmp.setup({
         end, { 'i', 's' }),
     },
     sources = {
-        { name = "copilot" },
+        { name = 'copilot' },
+        { name = 'path' },
         { name = 'nvim_lsp' },
+        { name = 'nvim_lsp_signature_help' },
+        { name = 'buffer' },
         { name = 'luasnip' },
+        { name = 'calc' },
     },
 })
