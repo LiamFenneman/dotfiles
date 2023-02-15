@@ -7,37 +7,38 @@ require('packer').startup(function(use)
         requires = { 'nvim-lua/plenary.nvim' }
     }
 
-    -- LSP
     use {
-        'neovim/nvim-lspconfig',
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
         requires = {
-            -- Automatically install LSPs to stdpath for neovim
-            'williamboman/mason.nvim',
-            'williamboman/mason-lspconfig.nvim',
+            -- LSP Support
+            { 'neovim/nvim-lspconfig' },
+            { 'williamboman/mason.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
+
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-nvim-lsp-signature-help' },
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-path' },
+            { 'saadparwaiz1/cmp_luasnip' },
+            { 'hrsh7th/cmp-nvim-lua' },
+
+            -- Snippets
+            { 'L3MON4D3/LuaSnip' },
 
             -- Useful status updates for LSP
-            'j-hui/fidget.nvim',
+            { 'j-hui/fidget.nvim' },
 
             -- Neovim LSP
-            'folke/neodev.nvim',
+            { 'folke/neodev.nvim' },
         }
     }
 
     -- Rust-specific
     use 'simrat39/rust-tools.nvim'
     use 'saecki/crates.nvim'
-
-    -- Autocompletion
-    use {
-        'hrsh7th/nvim-cmp',
-        requires = {
-            'hrsh7th/cmp-path',
-            'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-nvim-lsp-signature-help',
-            'L3MON4D3/LuaSnip',
-            'saadparwaiz1/cmp_luasnip'
-        },
-    }
 
     -- Add icons to nvim-cmp
     use 'onsails/lspkind.nvim'
