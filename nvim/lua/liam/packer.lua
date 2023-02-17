@@ -97,12 +97,6 @@ require('packer').startup(function(use)
         end
     }
 
-    -- Debugging
-    use 'mfussenegger/nvim-dap'
-    use 'theHamsta/nvim-dap-virtual-text'
-    use 'rcarriga/nvim-dap-ui'
-    use 'nvim-telescope/telescope-dap.nvim'
-
     -- Rose Pine Colorscheme
     use {
         'rose-pine/neovim',
