@@ -25,6 +25,9 @@ exec --no-startup-id nm-applet
 # Randomize the wallpaper
 exec_always --no-startup-id feh --bg-scale --no-fehbg --randomize /home/liam/Pictures/Wallpapers/*
 
+# Start Gnome Keyring
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
