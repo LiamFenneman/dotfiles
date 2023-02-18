@@ -1,3 +1,7 @@
+require("neodev").setup({
+    library = { plugins = { "nvim-dap-ui" }, types = true },
+})
+
 local lsp = require('lsp-zero').preset({
     name = 'minimal',
     set_lsp_keymaps = { omit = { '<F2>', '<F4>', 'gr' } },
@@ -5,12 +9,16 @@ local lsp = require('lsp-zero').preset({
     suggest_lsp_servers = false,
 })
 
-lsp.configure('sumneko_lua', {
-    diagnostics = {
-        globals = { 'vim' }
-    },
-    workspace = { checkThirdParty = false },
-    telemetry = { enable = false },
+lsp.configure('lua_ls', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            },
+            workspace = { checkThirdParty = false },
+            telemetry = { enable = false },
+        }
+    }
 })
 
 lsp.setup_servers({ 'rust_analyzer', 'tsserver' })
@@ -93,8 +101,4 @@ require('fidget').setup({
     window = {
         blend = 0,
     },
-})
-
-require("neodev").setup({
-    library = { plugins = { "nvim-dap-ui" }, types = true },
 })

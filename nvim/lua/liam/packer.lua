@@ -97,9 +97,11 @@ require('packer').startup(function(use)
         end
     }
 
-    -- Rose Pine Colorscheme
+    -- Colorscheme
     use {
         'rose-pine/neovim',
         as = 'rose-pine',
     }
+
+    use 'folke/tokyonight.nvim'
 end)
