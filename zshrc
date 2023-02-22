@@ -2,8 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="mortalscumbag"
-ZSH_THEME="liam"
+ZSH_THEME="robbyrussell"
 ZSH_TMUX_AUTOCONNECT=true
 ZSH_TMUX_AUTOSTART=true
 
