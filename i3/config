@@ -66,6 +66,7 @@ workspace $ws9 output DP-0
 workspace $ws10 output DP-0
 
 assign [class="Steam"] $ws7
+assign [class="easyeffects"] $ws8
 assign [class="chatterino"] $ws10
 assign [class="Spotify"] $ws10
 
