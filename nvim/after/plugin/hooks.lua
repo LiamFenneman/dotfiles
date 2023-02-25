@@ -1,0 +1,8 @@
+require('hooks').setup({})
+local ui = require('hooks.ui')
+vim.keymap.set({ 'n', 'v' }, '<leader>a', require('hooks.marks').add_file, { desc = '[A]dd hook' })
+vim.keymap.set({ 'n', 'v' }, '<leader>e', ui.toggle_menu, { desc = 'Toggle hooks menu' })
+vim.keymap.set({ 'n', 'v' }, '<leader>1', function() ui.nav_file(1) end, { desc = 'Go to hook [1]' })
+vim.keymap.set({ 'n', 'v' }, '<leader>2', function() ui.nav_file(2) end, { desc = 'Go to hook [2]' })
+vim.keymap.set({ 'n', 'v' }, '<leader>3', function() ui.nav_file(3) end, { desc = 'Go to hook [3]' })
+vim.keymap.set({ 'n', 'v' }, '<leader>4', function() ui.nav_file(4) end, { desc = 'Go to hook [4]' })

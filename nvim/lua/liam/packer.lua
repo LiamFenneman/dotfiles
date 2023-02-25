@@ -3,7 +3,8 @@ require('packer').startup(function(use)
 
     -- Markers
     use {
-        'ThePrimeagen/harpoon',
+        -- '~/Documents/Projects/hooks.nvim/',
+        'LiamFenneman/hooks.nvim',
         requires = { 'nvim-lua/plenary.nvim' }
     }
 
