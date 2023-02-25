@@ -26,7 +26,7 @@ alias d="cd ~/dotfiles/"
 
 # User configuration
 alias vim="nvim"
-alias ls="/usr/bin/ls -Ahls --color=auto"
+alias ls="exa -al --no-time"
 alias mv="mv -i"
 alias mkdir="mkdir -p"
 alias df="df -h"
