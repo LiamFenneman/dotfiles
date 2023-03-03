@@ -23,15 +23,18 @@ require('packer').startup(function(use)
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lua' },
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'hrsh7th/cmp-nvim-lsp-signature-help' },
             { 'hrsh7th/cmp-buffer' },
             { 'hrsh7th/cmp-path' },
             { 'saadparwaiz1/cmp_luasnip' },
-            { 'hrsh7th/cmp-nvim-lua' },
 
             -- Snippets
             { 'L3MON4D3/LuaSnip' },
+
+            -- Add icons to nvim-cmp
+            { 'onsails/lspkind.nvim' },
 
             -- Useful status updates for LSP
             { 'j-hui/fidget.nvim' },
@@ -44,9 +47,6 @@ require('packer').startup(function(use)
     -- Rust-specific
     use 'simrat39/rust-tools.nvim'
     use 'saecki/crates.nvim'
-
-    -- Add icons to nvim-cmp
-    use 'onsails/lspkind.nvim'
 
     -- Treesitter
     use {
