@@ -30,9 +30,6 @@ require('packer').startup(function(use)
             { 'hrsh7th/cmp-path' },
             { 'saadparwaiz1/cmp_luasnip' },
 
-            -- Snippets
-            { 'L3MON4D3/LuaSnip' },
-
             -- Add icons to nvim-cmp
             { 'onsails/lspkind.nvim' },
 
@@ -43,6 +40,9 @@ require('packer').startup(function(use)
             { 'folke/neodev.nvim' },
         }
     }
+
+    -- Snippets
+    use 'L3MON4D3/LuaSnip'
 
     -- Rust-specific
     use 'simrat39/rust-tools.nvim'
