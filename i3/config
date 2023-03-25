@@ -75,7 +75,7 @@ assign [class="Spotify"] $ws10
 tiling_drag modifier titlebar
 
 bindsym $mod+Return exec kitty
-bindsym $mod+o exec opera
+bindsym $mod+o exec firefox
 bindsym $mod+e exec nautilus
 bindsym $mod+Shift+q kill
 
