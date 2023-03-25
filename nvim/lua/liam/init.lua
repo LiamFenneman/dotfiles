@@ -1,7 +1,7 @@
 require('liam.packer')
 require('liam.set')
 require('liam.keymap')
-require('liam.latex')
+require('liam.commands')
 
 -- [[ Highlight on yank ]]
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
