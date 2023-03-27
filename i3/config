@@ -23,7 +23,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Randomize the wallpaper
-exec_always --no-startup-id feh --bg-scale --no-fehbg --randomize /home/liam/Pictures/Wallpapers/*
+# exec_always --no-startup-id feh --bg-scale --no-fehbg --randomize /home/liam/Pictures/Wallpapers/*
 
 # Start Gnome Keyring
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
