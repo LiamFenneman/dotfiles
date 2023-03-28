@@ -26,7 +26,7 @@ alias d="cd ~/dotfiles/"
 
 # User configuration
 alias vim="nvim"
-alias ls="exa -1lag -s Name --group-directories-first --icons --color=always"
+alias exa="exa -1lag -s Name --group-directories-first --icons --color=always"
 alias mv="mv -i"
 alias mkdir="mkdir -p"
 alias df="df -h"
