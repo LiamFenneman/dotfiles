@@ -9,7 +9,7 @@ ZSH_TMUX_AUTOSTART=true
 # Plugins
 plugins=(
     git
-    fzf-zsh-plugin
+    fzf
     fast-syntax-highlighting
     zsh-autosuggestions
     tmux
