@@ -41,6 +41,9 @@ require('packer').startup(function(use)
         }
     }
 
+    -- Formatter
+    use 'jose-elias-alvarez/null-ls.nvim'
+
     -- Snippets
     use 'L3MON4D3/LuaSnip'
 

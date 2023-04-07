@@ -13,3 +13,5 @@ vim.keymap.set('n', '<leader>gc', ':Git commit<CR>', { desc = '[G]it [C]ommit' }
 
 -- Source current file
 vim.keymap.set('n', '<leader><leader>x', ':source %<CR>', { desc = '[S]ource current file' })
+
+vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, { desc = '[F]ormat file' });
