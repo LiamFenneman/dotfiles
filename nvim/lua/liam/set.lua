@@ -49,3 +49,6 @@ vim.o.background = 'dark'
 vim.o.foldmethod = 'expr'
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldenable = false
+
+-- Text Width
+vim.o.textwidth = 110
