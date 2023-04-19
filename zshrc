@@ -40,8 +40,15 @@ alias gd="git diff"
 alias gdc="git diff --cached"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 
+# Choose a wallpaper from $WALLPAPER_DIR
 WALLPAPER_DIR=$HOME/Pictures/Wallpapers
 alias wp="/usr/bin/ls $WALLPAPER_DIR | fzf --preview=\"feh --bg-scale $WALLPAPER_DIR/{}\" | xargs -I {} feh --bg-scale $WALLPAPER_DIR/{}"
 
+# Add local bin to path
 export PATH=$HOME/.local/bin:$PATH
+
+# Set NVIM as default editor
 export EDITOR=/usr/bin/nvim
+
+# Turso
+export PATH="/home/liam/.turso:$PATH"
