@@ -1,5 +1,5 @@
 # My Linux config
 
 ### Install
-1. `sudo dnf install git kitty zsh fzf tmux neovim`
+1. `sudo dnf install fzf git i3 kitty neovim picom rofi tmux zsh`
 1. `./install.sh`

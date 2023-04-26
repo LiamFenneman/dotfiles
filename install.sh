@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-ln -s $(pwd)/zshrc ~/.zshrc
-ln -s $(pwd)/tmux.conf ~/.tmux.conf
-ln -s $(pwd)/nvim ~/.config/nvim
+ln -s $(pwd)/i3 ~/.config/i3
 ln -s $(pwd)/kitty ~/.config/kitty
+ln -s $(pwd)/nvim ~/.config/nvim
+ln -s $(pwd)/picom ~/.config/picom
+ln -s $(pwd)/rofi ~/.config/rofi
+ln -s $(pwd)/tmux.conf ~/.tmux.conf
+ln -s $(pwd)/zshrc ~/.zshrc
 
 # install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
