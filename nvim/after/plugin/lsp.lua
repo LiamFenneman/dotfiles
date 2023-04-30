@@ -21,7 +21,17 @@ lsp.configure('lua_ls', {
     }
 })
 
-lsp.setup_servers({ 'rust_analyzer', 'tsserver' })
+lsp.configure('rust_analyzer', {
+    settings = {
+        ['rust-analyzer'] = {
+            check = {
+                command = 'clippy'
+            },
+        },
+    },
+})
+
+lsp.setup_servers({ 'tsserver' })
 
 lsp.on_attach(function(client, bufnr)
     local nmap = function(keys, func, desc)
@@ -31,6 +41,8 @@ lsp.on_attach(function(client, bufnr)
 
         vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
     end
+
+    lsp.default_keymaps({ buffer = bufnr })
 
     nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
     nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
@@ -71,7 +83,7 @@ lsp.setup_nvim_cmp({
         { name = 'nvim_lsp' },
         { name = 'nvim_lsp_signature_help' },
         { name = 'luasnip' },
-        { name = 'buffer', keyword_length = 5 },
+        { name = 'buffer',                 keyword_length = 5 },
         { name = 'calc' },
         { name = 'crates' },
     },
