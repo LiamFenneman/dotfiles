@@ -1,9 +1,3 @@
--- [[ GitHub Copilot ]]
-require('copilot').setup({
-    suggestion = { enabled = false },
-    panel = { enabled = false },
-})
-
 -- [[ GitSigns ]]
 require('gitsigns').setup {
     signs = {
