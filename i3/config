@@ -51,7 +51,7 @@ workspace $ws9 output DP-0
 workspace $ws10 output DP-0
 
 assign [class="Steam"] $ws7
-assign [class="chatterino"] $ws9
+assign [class="chatterino"] $ws10
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
