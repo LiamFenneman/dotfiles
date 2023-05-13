@@ -6,6 +6,15 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
+exec chromium-browser
+exec easyeffects
+exec pavucontrol
+exec flatpak run org.spotify.Client
+
+for_window [class="easyeffects"] move scratchpad
+for_window [class="pavucontrol"] move scratchpad
+for_window [class="Spotify"] move scratchpad
+
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -42,16 +51,14 @@ workspace $ws9 output DP-0
 workspace $ws10 output DP-0
 
 assign [class="Steam"] $ws7
-assign [class="easyeffects"] $ws8
-assign [class="chatterino"] $ws10
-assign [class="Spotify"] $ws10
+assign [class="chatterino"] $ws9
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
 bindsym $mod+Return exec kitty
-bindsym $mod+o exec firefox
+bindsym $mod+o exec chromium-browser
 bindsym $mod+e exec nautilus
 bindsym $mod+Shift+q kill
 
@@ -80,6 +87,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 bindsym $mod+a focus parent
+
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+bindsym $mod+equal [title="Spotify"] scratchpad show
 
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
