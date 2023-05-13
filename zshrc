@@ -50,5 +50,8 @@ export PATH=$HOME/.local/bin:$PATH
 # Set NVIM as default editor
 export EDITOR=/usr/bin/nvim
 
+# Set the SSH Auth
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # Turso
 export PATH="/home/liam/.turso:$PATH"
