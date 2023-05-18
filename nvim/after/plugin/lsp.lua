@@ -31,6 +31,17 @@ lsp.configure('rust_analyzer', {
     },
 })
 
+lsp.configure('ltex', {
+    settings = {
+        ltex = {
+            language = 'en-NZ',
+            additionalRules = {
+                languageModel = '~/.local/share/ltex-ls/ngrams-en/',
+            },
+        },
+    },
+})
+
 lsp.setup_servers({ 'tsserver' })
 
 lsp.on_attach(function(client, bufnr)
