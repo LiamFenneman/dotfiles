@@ -31,10 +31,17 @@ lsp.configure('rust_analyzer', {
     },
 })
 
+local path = vim.fn.stdpath('config') .. '/spell/en.utf-8.add'
+local words = {}
+for word in io.open(path, 'r'):lines() do table.insert(words, word) end
+
 lsp.configure('ltex', {
     settings = {
         ltex = {
             language = 'en-NZ',
+            dictionary = {
+                ['en-NZ'] = words,
+            },
             additionalRules = {
                 languageModel = '~/.local/share/ltex-ls/ngrams-en/',
             },
