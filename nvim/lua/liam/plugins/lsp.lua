@@ -1,5 +1,10 @@
 return {
     {
+        'folke/neodev.nvim',
+        opts = {},
+        priority = 950,
+    },
+    {
         'williamboman/mason.nvim',
         lazy = false,
         priority = 900,
@@ -16,11 +21,14 @@ return {
         'neovim/nvim-lspconfig',
         lazy = false,
         priority = 900,
+        dependencies = { 'hrsh7th/cmp-nvim-lsp' },
         config = function()
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
             local lspconfig = require('lspconfig')
 
             -- Lua
             lspconfig.lua_ls.setup {
+                capabilities = capabilities,
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -34,6 +42,7 @@ return {
 
             -- Rust
             lspconfig.rust_analyzer.setup {
+                capabilities = capabilities,
                 settings = {
                     ['rust-analyzer'] = {
                         check = {
@@ -44,7 +53,9 @@ return {
             }
 
             -- Typescript
-            lspconfig.tsserver.setup {}
+            lspconfig.tsserver.setup {
+                capabilities = capabilities,
+            }
 
             local function gmap(keys, func, desc)
                 if desc then
