@@ -1,5 +1,8 @@
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Lazy.nvim
+vim.keymap.set('n', '<leader>lz', ':Lazy<CR>', { desc = 'Lazy: Open [L]azy' })
+
 -- Keybind to exit to Netrw
 vim.keymap.set({ 'n', 'v' }, '<leader>qq', vim.cmd.Ex, { desc = '[Q]uit to Netrw' })
 
