@@ -25,7 +25,6 @@ alias u="cd ~/Documents/University/"
 alias d="cd ~/dotfiles/"
 
 # User configuration
-alias vim="nvim"
 alias exa="exa -1lag -s Name --group-directories-first --icons --color=always"
 alias mv="mv -i"
 alias mkdir="mkdir -p"
@@ -48,7 +47,7 @@ alias wp="/usr/bin/ls $WALLPAPER_DIR | fzf --preview=\"feh --bg-scale $WALLPAPER
 export PATH=$HOME/.local/bin:$PATH
 
 # Set NVIM as default editor
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/local/bin/nvim
 
 # Turso
 export PATH="/home/liam/.turso:$PATH"
