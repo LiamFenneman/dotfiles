@@ -49,6 +49,8 @@ lsp.configure('ltex', {
     },
 })
 
+require('lspconfig').zls.setup({})
+
 lsp.setup_servers({ 'tsserver' })
 
 lsp.on_attach(function(client, bufnr)

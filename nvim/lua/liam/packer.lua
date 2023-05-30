@@ -51,6 +51,9 @@ require('packer').startup(function(use)
     use 'simrat39/rust-tools.nvim'
     use 'saecki/crates.nvim'
 
+    -- Zig-specific
+    use 'ziglang/zig.vim'
+
     -- Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
