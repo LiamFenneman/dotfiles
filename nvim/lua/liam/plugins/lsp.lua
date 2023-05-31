@@ -57,6 +57,30 @@ return {
                 capabilities = capabilities,
             }
 
+            -- Zig
+            lspconfig.zls.setup {
+                capabilities = capabilities,
+            }
+
+            -- LaTeX
+            local path = vim.fn.stdpath('config') .. '/spell/en.utf-8.add'
+            local words = {}
+            for word in io.open(path, 'r'):lines() do table.insert(words, word) end
+            lspconfig.ltex.setup {
+                capabilities = capabilities,
+                settings = {
+                    ltex = {
+                        language = "en-NZ",
+                        dictionary = {
+                            ['en-NZ'] = words,
+                        },
+                        additionalRules = {
+                            languageModel = '~/.local/share/ltex-ls/ngrams-en/',
+                        },
+                    },
+                },
+            }
+
             local function gmap(keys, func, desc)
                 if desc then
                     desc = 'LSP: ' .. desc
