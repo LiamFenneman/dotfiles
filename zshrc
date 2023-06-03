@@ -51,3 +51,5 @@ export EDITOR=/usr/local/bin/nvim
 
 # Turso
 export PATH="/home/liam/.turso:$PATH"
+
+[[ ! -r /home/liam/.opam/opam-init/init.zsh ]] || source /home/liam/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

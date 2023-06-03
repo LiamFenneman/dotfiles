@@ -62,6 +62,11 @@ return {
                 capabilities = capabilities,
             }
 
+            -- OCaml
+            lspconfig.ocamllsp.setup {
+                capabilities = capabilities,
+            }
+
             -- LaTeX
             local path = vim.fn.stdpath('config') .. '/spell/en.utf-8.add'
             local words = {}
