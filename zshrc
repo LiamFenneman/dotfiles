@@ -43,6 +43,8 @@ alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 WALLPAPER_DIR=$HOME/Pictures/Wallpapers
 alias wp="/usr/bin/ls $WALLPAPER_DIR | fzf --preview=\"feh --bg-scale $WALLPAPER_DIR/{}\" | xargs -I {} feh --bg-scale $WALLPAPER_DIR/{}"
 
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+
 # Add local bin to path
 export PATH=$HOME/.local/bin:$PATH
 
