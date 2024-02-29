@@ -18,6 +18,19 @@ return {
     config = function()
         --  See: `:help telescope.setup()`
         require("telescope").setup({
+            pickers = {
+                find_files = {
+                    find_command = {
+                        "rg",
+                        "--files",
+                        "--hidden",
+                        "--ignore",
+                        "-u",
+                        "--glob=!**/.git/*",
+                        "--glob=!**/node_modules/*",
+                    },
+                },
+            },
             extensions = {
                 ["ui-select"] = {
                     require("telescope.themes").get_dropdown(),
@@ -29,7 +42,7 @@ return {
         pcall(require("telescope").load_extension, "fzf")
         pcall(require("telescope").load_extension, "ui-select")
 
-        function nmap(key, f, desc, opts)
+        local function nmap(key, f, desc, opts)
             opts = opts or {}
             vim.keymap.set("n", key, f, { desc = desc })
         end
@@ -67,11 +80,11 @@ return {
             builtin.find_files({
                 cwd = vim.fn.stdpath("config"),
             })
-        end,"[S]earch [N]eovim files")
+        end, "[S]earch [N]eovim files")
         nmap("<leader>sm", function()
             builtin.find_files({
                 cwd = "~/nix-config/",
             })
-        end,"[S]earch [N]eovim files")
+        end, "[S]earch [N]eovim files")
     end,
 }
