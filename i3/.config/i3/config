@@ -25,8 +25,8 @@ default_border pixel 1
 default_floating_border pixel 1
 
 bindsym $mod+q exec kitty
-bindsym $mod+w exec brave
-bindsym $mod+Shift+w exec "brave --incognito"
+bindsym $mod+w exec chromium
+bindsym $mod+Shift+w exec "chromium --incognito"
 bindsym $mod+e exec thunar
 bindsym $mod+c kill
 
