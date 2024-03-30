@@ -30,6 +30,7 @@ return {
                         "--glob=!**/.direnv/*",
                         "--glob=!**/node_modules/*",
                         "--glob=!**/target/*",
+                        "--glob=!**/dist/*",
                     },
                 },
             },

@@ -1,3 +1,4 @@
+require("liam.autocmds")
 require("liam.opts")
 require("liam.keys")
 

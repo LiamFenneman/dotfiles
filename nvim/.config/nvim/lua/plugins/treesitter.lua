@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
@@ -16,6 +17,7 @@ return {
                 "typescript",
                 "vim",
                 "vimdoc",
+                "wgsl",
             },
             auto_install = true,
             highlight = { enable = true },
