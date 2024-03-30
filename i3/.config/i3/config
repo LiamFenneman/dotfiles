@@ -24,7 +24,7 @@ tiling_drag modifier titlebar
 default_border pixel 1
 default_floating_border pixel 1
 
-bindsym $mod+q exec kitty
+bindsym $mod+q exec wezterm
 bindsym $mod+w exec chromium
 bindsym $mod+Shift+w exec "chromium --incognito"
 bindsym $mod+e exec thunar
