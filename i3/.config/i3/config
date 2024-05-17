@@ -72,7 +72,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-assign [class="^steam$"] $ws3
 assign [class="^easyeffects$"] $ws7
 
 workspace $ws1 output DP-2

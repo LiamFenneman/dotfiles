@@ -7,9 +7,19 @@ return {
             transparent = false,
         },
         init = function()
-            vim.cmd.colorscheme("tokyonight-night")
-            vim.cmd.hi("Comment gui=none")
+            vim.cmd.colorscheme("tokyonight")
         end,
+    },
+    {
+        "ellisonleao/gruvbox.nvim",
+        config = true,
+        opts = {},
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = true,
+        opts = {},
     },
     {
         "nvim-lualine/lualine.nvim",
