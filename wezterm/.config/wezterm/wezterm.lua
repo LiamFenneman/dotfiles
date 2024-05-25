@@ -7,10 +7,10 @@ config.font_size = 12
 config.color_scheme = "Tokyo Night"
 
 config.window_padding = {
-    left = 2,
-    right = 2,
-    top = 0,
-    bottom = 0,
+  left = 2,
+  right = 2,
+  top = 0,
+  bottom = 0,
 }
 
 config.tab_bar_at_bottom = true

@@ -5,3 +5,4 @@ file:///home/liam/Pictures
 file:///home/liam/Videos
 file:///home/liam/nix-config
 file:///home/liam/dotfiles
+sftp://192.168.254.120/home/jellyfin
