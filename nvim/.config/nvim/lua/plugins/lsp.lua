@@ -87,8 +87,6 @@ return {
                     },
                 },
             },
-            nil_ls = {},
-            wgsl_analyzer = {},
         }
 
         for server_name, server in pairs(servers) do
