@@ -59,3 +59,11 @@ export PATH="$PATH:/home/liam/.local/share/JetBrains/Toolbox/scripts"
 export LANG="en_NZ.utf8"
 
 eval "$(zoxide init zsh)"
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/liam/.pulumi/bin
+alias p=pulumi
+alias k=kubectl
+
+export AWS_PROFILE=dev
+export PULUMI_CONFIG_PASSPHRASE_FILE="/tmp/pulumi.txt"
