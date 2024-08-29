@@ -66,4 +66,4 @@ alias p=pulumi
 alias k=kubectl
 
 export AWS_PROFILE=dev
-export PULUMI_CONFIG_PASSPHRASE_FILE="/tmp/pulumi.txt"
+export PULUMI_CONFIG_PASSPHRASE_FILE="/home/liam/tmp/pulumi.txt"
