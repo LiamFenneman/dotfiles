@@ -25,6 +25,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 exec --no-startup-id xrandr --output eDP-1 --right-of DP-1
 
+exec --no-startup-id feh --randomize --bg-fill  ~/Pictures/Wallpapers/
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -147,12 +149,12 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-workspace $ws1 output DP-3
-workspace $ws2 output DP-3
-workspace $ws3 output DP-3
-workspace $ws4 output DP-3
-workspace $ws5 output DP-3
-workspace $ws6 output DP-3
+workspace $ws1 output DP-1
+workspace $ws2 output DP-1
+workspace $ws3 output DP-1
+workspace $ws4 output DP-1
+workspace $ws5 output DP-1
+workspace $ws6 output DP-1
 workspace $ws7 output eDP-1
 workspace $ws8 output eDP-1
 workspace $ws9 output eDP-1

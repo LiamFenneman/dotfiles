@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+
+set -e
+
+COMMAND=$1
+
+if [ -z "$COMMAND" ]; then
+    echo "Usage: gw <command> [args..]"
+    echo "     : gw clone <repo>"
+    echo "     : gw sync"
+    echo "     : gw switch <branch-name>"
+    echo "     : gw launch-config"
+    exit
+fi
+
+clone() {
+    REPO=$1
+    REPO_URL=git@github.com:TracPlus/$REPO.git
+
+    echo "Repository URL: $REPO_URL"
+    read -r -p "Name of the development branch (development): " BRANCH
+    if [ -z "$BRANCH" ]; then
+        BRANCH=development
+    fi
+
+    mkdir -p "$REPO"
+    cd "$REPO"
+
+    git clone "$REPO_URL" "$BRANCH"
+    cd "$BRANCH"
+
+    git worktree add ../work
+    git worktree add ../scratch
+    git worktree add ../review
+
+    cd ..
+    zoxide add .
+    zoxide add "./$BRANCH"
+    zoxide add ./work
+    zoxide add ./scratch
+    zoxide add ./review
+}
+
+get_branch() {
+    BRANCH=development
+    if [ ! -d "../$BRANCH" ]; then
+        BRANCH=dev
+    fi
+    if [ ! -d "../$BRANCH" ]; then
+        echo "Development branch is non-standard, cannot sync."
+        # TODO: while loop get branch from user input
+        exit
+    fi
+
+    echo "$BRANCH"
+}
+
+sync() {
+    cd "../$1"
+    git pull origin "$1"
+    cd -
+}
+
+switch() {
+    sync "$2"
+    git switch -c $1 $2
+}
+
+launchConfig() {
+    SRC="$HOME/git/launchSettings.json"
+    DST="$(pwd)/Properties"
+    DST_FILE="$DST/launchSettings.json"
+    mkdir -p "$DST"
+    ln -s "$SRC" "$DST_FILE"
+    echo "Linked $DST_FILE -> $SRC"
+}
+
+case "$COMMAND" in
+    "clone") REPO=$2
+    if [ -z "$REPO" ]; then
+        echo "Usage: gw clone <repo>"
+        exit
+    fi
+    clone "$REPO"
+    ;;
+    "sync") BRANCH=$(get_branch)
+    sync "$BRANCH"
+    ;;
+    "switch") BRANCH=$(get_branch)
+    switch $2 "$BRANCH"
+    ;;
+    "launch-config") launchConfig
+    ;;
+    *) echo "Usage: gw <command> [args..]"
+    ;;
+esac
+

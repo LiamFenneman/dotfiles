@@ -13,8 +13,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+source ~/.zshenv
+
 source /usr/share/zplug/init.zsh
-zplug "plugins/git", from:oh-my-zsh
+# zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/fzf", from:oh-my-zsh
@@ -30,12 +32,13 @@ if ! zplug check --verbose; then
         echo; zplug install
     fi
 fi
-# zplug load --verbose
 zplug load
 
 bindkey '^ ' autosuggest-accept
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
+
+export LANG="en_NZ.utf8"
 
 alias ls='ls -al --color=auto'
 alias g='git '
@@ -53,17 +56,28 @@ export FZF_ALT_C_OPTS="--height 60% \
                        --pointer ▶ \
                        --marker ⇒"
 
-export PATH="$PATH:~/.dotnet/tools"
-export PATH="$PATH:/home/liam/.local/bin"
-export PATH="$PATH:/home/liam/.local/share/JetBrains/Toolbox/scripts"
-export LANG="en_NZ.utf8"
+path_add() {
+    export PATH="$PATH:$1"
+}
+
+path_add "/home/liam/.dotnet/tools"
+path_add "/home/liam/.local/bin"
+path_add "/home/liam/.local/share/JetBrains/Toolbox/scripts"
 
 eval "$(zoxide init zsh)"
+
+eval $(keychain --eval --agents ssh --quick --quiet)
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/liam/.pulumi/bin
 alias p=pulumi
 alias k=kubectl
 
+alias gcloud=/home/liam/.local/bin/gcloud-wrapper.sh
+
 export AWS_PROFILE=dev
 export PULUMI_CONFIG_PASSPHRASE_FILE="/home/liam/tmp/pulumi.txt"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
