@@ -3,6 +3,7 @@ source /etc/zshrc
 bindkey '^ ' autosuggest-accept
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 export CARGO_TARGET_DIR="$HOME/.cargo/target"
 

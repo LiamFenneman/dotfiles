@@ -18,22 +18,23 @@ return {
   config = function()
     --  See: `:help telescope.setup()`
     require("telescope").setup({
-      pickers = {
-        find_files = {
-          find_command = {
-            "rg",
-            "--files",
-            "--hidden",
-            "--ignore",
-            "-u",
-            "--glob=!**/.git/*",
-            "--glob=!**/.direnv/*",
-            "--glob=!**/node_modules/*",
-            "--glob=!**/target/*",
-            "--glob=!**/dist/*",
-          },
-        },
-      },
+      -- pickers = {
+      --   find_files = {
+      --     find_command = {
+      --       "rg",
+      --       "--files",
+      --       "--hidden",
+      --       "--ignore",
+      --       "-u",
+      --       "--glob=!**/.git/*",
+      --       "--glob=!**/.direnv/*",
+      --       "--glob=!**/node_modules/*",
+      --       "--glob=!**/target/*",
+      --       "--glob=!**/dist/*",
+      --       "--glob=!**/build/*",
+      --     },
+      --   },
+      -- },
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown(),

@@ -95,6 +95,10 @@ return {
           },
         },
       },
+      gleam = {
+        manual_install = true,
+      },
+      zls = {},
     }
 
     local servers_to_install = vim.tbl_filter(function(key)
