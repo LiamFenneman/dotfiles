@@ -7,7 +7,7 @@ fi
 
 if [ $1 == "use" ]; then
     case "$2" in
-        "prod") /usr/bin/kubectl config use-context gke_theseus-staging-347811_us-central1-a_main
+        "prod") /usr/bin/kubectl config use-context gke_u1-staging_us-central1-a_main
         ;;
         "stag") /usr/bin/kubectl config use-context gke_theseus-staging-347811_us-central1-a_main
         ;;
