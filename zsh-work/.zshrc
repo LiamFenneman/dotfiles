@@ -39,9 +39,11 @@ bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
 
 export LANG="en_NZ.utf8"
+export EDITOR=nvim
 
 alias ls='ls -al --color=auto'
 alias g='git '
+alias gc='git commit'
 alias gs='git status'
 alias gp='git push '
 alias ga='git add '
@@ -66,12 +68,12 @@ path_add "/home/liam/.local/share/JetBrains/Toolbox/scripts"
 
 eval "$(zoxide init zsh)"
 
-eval $(keychain --eval --agents ssh --quick --quiet)
+eval $(keychain --eval --agents ssh --quick --quiet id_ed25519 google_compute_engine)
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/liam/.pulumi/bin
 alias p=pulumi
-alias k=kubectl
+alias k=$HOME/.local/bin/kubectl-wrapper.sh
 
 alias gcloud=/home/liam/.local/bin/gcloud-wrapper.sh
 
